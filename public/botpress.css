@@ -1,0 +1,241 @@
+/* ==========================================================================
+   Civic Care Assistant - Dark Glassmorphic Midnight Theme
+   Matches CivicFix AI Design System: Slate-950, Indigo-600, Violet Glow
+   ========================================================================== */
+
+/* 1. RESET AVATAR & LAUNCHER BACKGROUNDS (REMOVE ALL WHITE CIRCLES/BOXES) */
+.bpFabContainer,
+.bpFab,
+.bpHeaderContentAvatarContainer,
+.bpHeaderContentAvatarImage,
+.bpMessageAvatarContainer,
+.bpMessageAvatarImage,
+.bpMessageListMarqueeAvatarContainer,
+.bpMessageListMarqueeAvatarImage,
+.bpMessagePreviewAvatarContainer,
+.bpMessagePreviewAvatarImage,
+[class*="AvatarContainer"],
+[class*="AvatarImage"],
+[class*="avatar"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 2. FLOATING ACTION BUTTON (FAB LAUNCHER) */
+.bpFabWrapper {
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+}
+
+.bpFab {
+  width: 68px !important;
+  height: 68px !important;
+  border-radius: 9999px !important;
+  background: radial-gradient(circle at 35% 35%, rgba(99, 102, 241, 0.42), rgba(15, 23, 42, 0.96) 75%) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(99, 102, 241, 0.5) !important;
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.45), 0 10px 30px rgba(0, 0, 0, 0.75) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+.bpFab:hover {
+  transform: scale(1.08) translateY(-3px) !important;
+  border-color: rgba(129, 140, 248, 0.85) !important;
+  box-shadow: 0 0 35px rgba(99, 102, 241, 0.7), 0 16px 40px rgba(0, 0, 0, 0.85) !important;
+}
+
+.bpFab:active {
+  transform: scale(0.95) !important;
+}
+
+.bpFabContainer {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border-radius: 9999px !important;
+  padding: 6px !important;
+}
+
+/* Character Mascot in FAB */
+.bpFabImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  filter: drop-shadow(0 4px 10px rgba(99, 102, 241, 0.55)) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease !important;
+}
+
+.bpFab:hover .bpFabImage {
+  filter: drop-shadow(0 6px 16px rgba(129, 140, 248, 0.85)) !important;
+  transform: scale(1.06) !important;
+}
+
+/* Unread Badge */
+.bpUnreadMessage {
+  background: linear-gradient(135deg, #ef4444, #f43f5e) !important;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.7) !important;
+  font-weight: 700 !important;
+  border: 2px solid #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* 3. CHAT WINDOW CONTAINER (MIDNIGHT DARK & FROSTED GLASS) */
+.bpWebchat,
+.bpChatContainer,
+.bpContainer {
+  background-color: #0b0f19 !important;
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 45px rgba(99, 102, 241, 0.25) !important;
+  overflow: hidden !important;
+}
+
+/* 4. HEADER STYLING */
+.bpHeaderContainer {
+  background: rgba(15, 23, 42, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.25) !important;
+  color: #f8fafc !important;
+  padding: 14px 18px !important;
+}
+
+.bpHeaderContentTitle {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #f8fafc !important;
+  font-size: 16px !important;
+}
+
+.bpHeaderContentDescription {
+  color: #94a3b8 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.bpHeaderContentAvatarContainer {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border: 1.5px solid rgba(99, 102, 241, 0.4) !important;
+  border-radius: 9999px !important;
+  padding: 2px !important;
+  overflow: visible !important;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+.bpHeaderContentAvatarImage {
+  object-fit: contain !important;
+  background: transparent !important;
+  filter: drop-shadow(0 2px 6px rgba(99, 102, 241, 0.5)) !important;
+}
+
+/* 5. MESSAGE AVATARS (INSIDE CONVERSATION) */
+.bpMessageAvatarContainer {
+  background: transparent !important;
+  border-radius: 9999px !important;
+  overflow: visible !important;
+}
+
+.bpMessageAvatarImage {
+  object-fit: contain !important;
+  background: transparent !important;
+  filter: drop-shadow(0 2px 6px rgba(99, 102, 241, 0.45)) !important;
+}
+
+.bpMessageAvatarFallback {
+  display: none !important;
+}
+
+.bpMessageListMarqueeAvatarImage {
+  object-fit: contain !important;
+  background: transparent !important;
+  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.5)) !important;
+}
+
+/* 6. MESSAGE BUBBLES */
+/* Citizen / User Message */
+.bpMessageBlocksBubble[data-author="user"],
+[class*="userMessage"],
+[class*="outgoing"] {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+  color: #ffffff !important;
+  border-radius: 18px 18px 4px 18px !important;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35) !important;
+  border: none !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+/* Civic Care Assistant / Bot Message */
+.bpMessageBlocksBubble[data-author="bot"],
+[class*="botMessage"],
+[class*="incoming"] {
+  background: rgba(30, 41, 59, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(99, 102, 241, 0.22) !important;
+  border-radius: 18px 18px 18px 4px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+/* 7. COMPOSER / INPUT SECTION */
+.bpComposerContainer,
+[class*="composer"] {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-top: 1px solid rgba(99, 102, 241, 0.22) !important;
+  padding: 10px 14px !important;
+}
+
+.bpComposerTextArea,
+[class*="ComposerTextArea"] {
+  background: rgba(30, 41, 59, 0.65) !important;
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+  color: #f8fafc !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+}
+
+.bpComposerTextArea:focus,
+[class*="ComposerTextArea"]:focus {
+  border-color: #6366f1 !important;
+  outline: none !important;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4) !important;
+}
+
+.bpComposerSendButton {
+  background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.45) !important;
+  border-radius: 9999px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.bpComposerSendButton:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 22px rgba(99, 102, 241, 0.65) !important;
+}
+
+/* 8. FOOTER / POWERED BY */
+.bpFooterContainer,
+[class*="footer"] {
+  background: transparent !important;
+  color: #64748b !important;
+  font-size: 11px !important;
+}
+
+.bpFooterContainer a,
+[class*="footer"] a {
+  color: #818cf8 !important;
+  text-decoration: none !important;
+}
